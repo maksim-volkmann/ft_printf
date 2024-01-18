@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:43:28 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/01/02 15:33:29 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/01/18 11:11:45 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_conversions(const char *format, va_list args)
 	else if (*format == 'i' || *format == 'd')
 		return (ft_putint(va_arg(args, int)));
 	else if (*format == 'u')
-		return (ft_putuint(va_arg(args, unsigned int)));
+		return (ft_putint(va_arg(args, unsigned int)));
 	else if (*format == 'x')
 		return (ft_puthex(va_arg(args, unsigned int), 0));
 	else if (*format == 'X')

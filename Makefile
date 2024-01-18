@@ -6,7 +6,7 @@
 #    By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 16:31:03 by mvolkman          #+#    #+#              #
-#    Updated: 2024/01/02 15:33:50 by mvolkman         ###   ########.fr        #
+#    Updated: 2024/01/18 11:16:16 by mvolkman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 # Source files for ft_printf
 SRC = ft_printf.c \
-	ft_helper_c_str.c \
-	ft_helper_int_hex.c
+	ft_printf_helper.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
