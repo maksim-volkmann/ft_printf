@@ -6,46 +6,37 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 15:33:06 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/01/18 12:25:07 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/01/19 11:44:13 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-// int	ft_puthex(unsigned long long n, int c)
-// {
-// 	char	*hex;
-// 	int		count;
-
-// 	hex = "0123456789ABCDEF";
-// 	if (n >= 16)
-// 	{
-// 		count = ft_puthex(n / 16, c);
-// 		if (count == -1)
-// 			return (-1);
-// 	}
-// 	else
-// 		count = 0;
-// 	if (c)
-// 	{
-// 		if (ft_putchar(ft_toupper(hex[n % 16])) == -1)
-// 			return (-1);
-// 	}
-// 	else
-// 	{
-// 		if (ft_putchar(hex[n % 16]) == -1)
-// 			return (-1);
-// 	}
-// 	return (count + 1);
-// }
-
 int	ft_puthex(unsigned long long n, int c)
 {
-	char const	*hex = "0123456789ABCDEF";
+	char const	*hex = "0123456789abcdef";
+	char		hex_char;
 	int			count;
 
-
-
+	count = 0;
+	if (n >= 16)
+	{
+		count = ft_puthex(n / 16, c);
+		if (count == -1)
+			return (-1);
+	}
+	if (c)
+	{
+		hex_char = ft_toupper(hex[n % 16]);
+		if (ft_putchar(hex_char) == -1)
+			return (-1);
+	}
+	else
+	{
+		if (ft_putchar(hex[n % 16]) == -1)
+			return (-1);
+	}
+	return (count + 1);
 }
 
 int	ft_putptn(void *n)
@@ -65,7 +56,7 @@ int	ft_putptn(void *n)
 	return (count);
 }
 
-int	ft_putint(long long n)
+int	ft_putint(long n)
 {
 	int	count;
 	int	temp;
