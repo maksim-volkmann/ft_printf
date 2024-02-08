@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:45:58 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/01/19 11:37:26 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/02/08 11:05:36 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <unistd.h>
 # include "./libft/libft.h"
 
-int	ft_putuint(unsigned int n);
 int	ft_putint(long n);
 int	ft_putptn(void *n);
 int	ft_puthex(unsigned long long n, int c);

@@ -6,11 +6,42 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 15:33:06 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/01/19 11:44:13 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/02/08 11:06:27 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_putchar(char c)
+{
+	int	check;
+
+	check = write(1, &c, 1);
+	if (check == -1)
+		return (-1);
+	return (check);
+}
+
+int	ft_putstr(char *str)
+{
+	int	count;
+	int	i;
+	int	check;
+
+	count = 0;
+	i = 0;
+	if (str == NULL )
+		return (write(1, "(null)", sizeof(char) * 6));
+	while (str[i])
+	{
+		check = ft_putchar(str[i]);
+		if (check == -1)
+			return (-1);
+		count += check;
+		i++;
+	}
+	return (count);
+}
 
 int	ft_puthex(unsigned long long n, int c)
 {
@@ -79,35 +110,4 @@ int	ft_putint(long n)
 	if (ft_putchar(n % 10 + '0') == -1)
 		return (-1);
 	return (count + 1);
-}
-
-int	ft_putchar(char c)
-{
-	int	check;
-
-	check = write(1, &c, 1);
-	if (check == -1)
-		return (-1);
-	return (check);
-}
-
-int	ft_putstr(char *str)
-{
-	int	count;
-	int	i;
-	int	check;
-
-	count = 0;
-	i = 0;
-	if (str == NULL )
-		return (write(1, "(null)", sizeof(char) * 6));
-	while (str[i])
-	{
-		check = ft_putchar(str[i]);
-		if (check == -1)
-			return (-1);
-		count += check;
-		i++;
-	}
-	return (count);
 }

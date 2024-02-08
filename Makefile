@@ -6,7 +6,7 @@
 #    By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 16:31:03 by mvolkman          #+#    #+#              #
-#    Updated: 2024/01/18 11:16:16 by mvolkman         ###   ########.fr        #
+#    Updated: 2024/02/08 11:05:30 by mvolkman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,6 @@ OBJ = $(SRC:.c=.o)
 # Library directories and flags for libft
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
-# LIBS = -L$(LIBFT_DIR) -lft
 
 # Include directories for ft_printf and libft
 INCLUDES = -I$(LIBFT_DIR)
