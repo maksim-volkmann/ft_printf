@@ -1,7 +1,7 @@
 # ft_printf
 
 <div align="center">
-	<img src="https://github.com/maksim-volkmann/42-project-badges/blob/main/badges/ft_printfe.png" width="200" alt="Libft badge" />
+	<img src="https://github.com/maksim-volkmann/42-project-badges/blob/main/badges/ft_printfe.png" width="170" alt="Libft badge" />
 </div>
 
 ft_printf is a custom implementation of the standard C library function [printf](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm). It mimics the behavior of printf while handling a subset of format specifiers. The project was created as part of the 42 School curriculum, focusing on modular design and low-level programming techniques.
