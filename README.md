@@ -4,7 +4,7 @@
 	<img src="https://github.com/maksim-volkmann/42-project-badges/blob/main/badges/ft_printfe.png" width="170" alt="Libft badge" />
 </div>
 
-ft_printf is a custom implementation of the standard C library function [printf](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm). It mimics the behavior of printf while handling a subset of format specifiers. The project was created as part of the 42 School curriculum, focusing on modular design and low-level programming techniques.
+ft_printf is a custom version of the standard C function [printf](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm). It works like printf but only supports a few specific format specifiers. This project is part of the 42 School program and focuses on clear coding and low-level programming.
 
 ### Supported Format Specifiers:
 ```
@@ -23,19 +23,20 @@ Recreates the functionality of printf for the above specifiers.
 Utilizes variadic functions (va_start, va_arg, va_end) to handle dynamic arguments.
 Built as a static library libftprintf.a.
 Relies on functions from libft for core operations.
-How to Compile and Run:
 
-### Simply run make in the project directory:
+### How to Compile and Run:
+
+#### Simply run make in the project directory:
 ```
 make
 ```
 
-### Include the library in your project:
+#### Include the library in your project:
 ```
 gcc main.c -L. -lftprintf -o my_program
 ```
 
-### Use ft_printf as a drop-in replacement for printf:
+#### Use ft_printf as a drop-in replacement for printf:
 ```
 ft_printf("Hello, %s! You are number %d.\n", "world", 42);
 ```
